@@ -15,7 +15,7 @@ class DocumentController extends Controller
         if (!$file) {
             return response()->json(['error' => 'File tidak ditemukan'], 400);
         }
-        // return $file;
+        // return $file; aa
         $inputPath = $file->getRealPath();
         
         $outputPath = storage_path('app/documents/' . pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME) . '.pdf');
