@@ -23,7 +23,7 @@ class DocumentController extends Controller
         try {
             
             $pdfPath = $this->convertWordTosPdf($inputPath, $outputPath);
-            // return $pdfPath;
+            // return $pdfPath;  
             
             return response()->download($pdfPath);
         } catch (\Exception $e) {
