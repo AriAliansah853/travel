@@ -47,10 +47,10 @@
                   </div>
                   <a href="#" class="auth-link text-primary">Forgot password?</a>
                 </div>
-                <div class="gap-2 mb-2 d-grid">
+                {{-- <div class="gap-2 mb-2 d-grid">
                   <button type="button" class="btn btn-block btn-facebook auth-form-btn">
                     <i class="mdi mdi-facebook me-2"></i>Connect using facebook </button>
-                </div>
+                </div> --}}
                 <div class="mt-4 text-center font-weight-light"> Don't have an account? <a
                     href="{{ route('register') }}" class="text-primary">Create</a>
                 </div>

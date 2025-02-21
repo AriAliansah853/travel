@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\CmsSetting;
 use App\Http\Controllers\Auth\AuthController;
 
 
@@ -17,6 +17,14 @@ Route::get('/upload', function () {
 });
 
 
+// nanti kasih auth
+
+
+Route::get('/api/banner-promosi', [CmsSetting::class, 'getData']);
+Route::post('/api/banner-promosi', [CmsSetting::class, 'store']);
+Route::delete('/api/banner-promosi/{id}', [CmsSetting::class, 'destroy']);
+
+
 
 
 Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
@@ -28,3 +36,4 @@ Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->get('/', [DashboardController::class, 'showMenu'])->name('dashboard');
 Route::middleware(['auth'])->get('dashboard', [DashboardController::class, 'showMenu'])->name('dashboard');
+Route::middleware(['auth'])->get('setting-cms', [CmsSetting::class, 'SettingCms'])->name('setting-cms');

@@ -14,7 +14,7 @@ class DashboardController extends Controller
         $menus = DB::table('MenuUtama as m')
             ->leftJoin('SubMenu as s', 'm.menu_id', '=', 's.menu_id')
             ->where('m.status', 'aktif')
-            ->select('m.menu_id', 'm.nama_menu', 's.submenu_id', 's.nama_submenu', 's.url')
+            ->select('m.menu_id', 'm.nama_menu', 's.submenu_id', 's.nama_submenu', 's.url','m.icon','m.menuUrl')
             ->orderBy('m.urutan')
             ->orderBy('s.urutan')
             ->get();
