@@ -1,485 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
-    @include('layouts.header')
-  <body>
-    <div class="container-scroller">
-      
-      <!-- partial:partials/_navbar.html -->
-      @include('layouts.navbar')
+@include('layouts.header')
+
+<body>
+  <div class="container-scroller">
+
+    <!-- partial:partials/_navbar.html -->
+    @include('layouts.navbar')
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      @include('layouts.sidebar')
       <!-- partial -->
-      <div class="container-fluid page-body-wrapper">
-        <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
-          <ul class="nav">
-            <li class="nav-item nav-profile">
-              <a href="#" class="nav-link">
-                <div class="nav-profile-image">
-                  <img src="{{ asset('assets/images/faces/face1.jpg')}}" alt="profile" />
-                  <span class="login-status online"></span>
-                  <!--change to offline or busy as needed-->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="page-header">
+            <h3 class="page-title">
+              <span class="text-white page-title-icon bg-gradient-primary me-2">
+                <i class="mdi mdi-home"></i>
+              </span> Dashboard
+            </h3>
+            <nav aria-label="breadcrumb">
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">
+                  <span></span>Overview <i class="align-middle mdi mdi-alert-circle-outline icon-sm text-primary"></i>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="row">
+            <div class="col-md-4 stretch-card grid-margin">
+              <div class="text-white card bg-gradient-danger card-img-holder">
+                <div class="card-body">
+                  <img src="{{ asset('assets/images/dashboard/circle.svg')}}" class="card-img-absolute"
+                    alt="circle-image" />
+                  <h4 class="mb-3 font-weight-normal">Weekly Sales <i class="mdi mdi-chart-line mdi-24px float-end"></i>
+                  </h4>
+                  <h2 class="mb-5">$ 15,0000</h2>
+                  <h6 class="card-text">Increased by 60%</h6>
                 </div>
-                <div class="nav-profile-text d-flex flex-column">
-                  <span class="mb-2 font-weight-bold">David Grey. H</span>
-                  <span class="text-secondary text-small">Project Manager</span>
-                </div>
-                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                <span class="menu-title">Dashboard</span>
-                <i class="mdi mdi-home menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Basic UI Elements</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
-                  </li>
-                </ul>
               </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-                <span class="menu-title">Icons</span>
-                <i class="mdi mdi-contacts menu-icon"></i>
-              </a>
-              <div class="collapse" id="icons">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/icons/font-awesome.html">Font Awesome</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#forms" aria-expanded="false" aria-controls="forms">
-                <span class="menu-title">Forms</span>
-                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-              </a>
-              <div class="collapse" id="forms">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/basic_elements.html">Form Elements</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-                <span class="menu-title">Charts</span>
-                <i class="mdi mdi-chart-bar menu-icon"></i>
-              </a>
-              <div class="collapse" id="charts">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-                <span class="menu-title">Tables</span>
-                <i class="mdi mdi-table-large menu-icon"></i>
-              </a>
-              <div class="collapse" id="tables">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                <span class="menu-title">User Pages</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-lock menu-icon"></i>
-              </a>
-              <div class="collapse" id="auth">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/samples/login.html"> Login </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/samples/register.html"> Register </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/samples/error-404.html"> 404 </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/samples/error-500.html"> 500 </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="docs/documentation.html" target="_blank">
-                <span class="menu-title">Documentation</span>
-                <i class="mdi mdi-file-document-box menu-icon"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- partial -->
-        <div class="main-panel">
-          <div class="content-wrapper">
-            <div class="page-header">
-              <h3 class="page-title">
-                <span class="text-white page-title-icon bg-gradient-primary me-2">
-                  <i class="mdi mdi-home"></i>
-                </span> Dashboard
-              </h3>
-              <nav aria-label="breadcrumb">
-                <ul class="breadcrumb">
-                  <li class="breadcrumb-item active" aria-current="page">
-                    <span></span>Overview <i class="align-middle mdi mdi-alert-circle-outline icon-sm text-primary"></i>
-                  </li>
-                </ul>
-              </nav>
             </div>
-            <div class="row">
-              <div class="col-md-4 stretch-card grid-margin">
-                <div class="text-white card bg-gradient-danger card-img-holder">
-                  <div class="card-body">
-                    <img src="{{ asset('assets/images/dashboard/circle.svg')}}" class="card-img-absolute" alt="circle-image" />
-                    <h4 class="mb-3 font-weight-normal">Weekly Sales <i class="mdi mdi-chart-line mdi-24px float-end"></i>
-                    </h4>
-                    <h2 class="mb-5">$ 15,0000</h2>
-                    <h6 class="card-text">Increased by 60%</h6>
-                  </div>
+            <div class="col-md-4 stretch-card grid-margin">
+              <div class="text-white card bg-gradient-info card-img-holder">
+                <div class="card-body">
+                  <img src="{{ asset('assets/images/dashboard/circle.svg')}}" class="card-img-absolute"
+                    alt="circle-image" />
+                  <h4 class="mb-3 font-weight-normal">Weekly Orders <i
+                      class="mdi mdi-bookmark-outline mdi-24px float-end"></i>
+                  </h4>
+                  <h2 class="mb-5">45,6334</h2>
+                  <h6 class="card-text">Decreased by 10%</h6>
                 </div>
               </div>
-              <div class="col-md-4 stretch-card grid-margin">
-                <div class="text-white card bg-gradient-info card-img-holder">
-                  <div class="card-body">
-                    <img src="{{ asset('assets/images/dashboard/circle.svg')}}" class="card-img-absolute" alt="circle-image" />
-                    <h4 class="mb-3 font-weight-normal">Weekly Orders <i class="mdi mdi-bookmark-outline mdi-24px float-end"></i>
-                    </h4>
-                    <h2 class="mb-5">45,6334</h2>
-                    <h6 class="card-text">Decreased by 10%</h6>
-                  </div>
+            </div>
+            <div class="col-md-4 stretch-card grid-margin">
+              <div class="text-white card bg-gradient-success card-img-holder">
+                <div class="card-body">
+                  <img src="{{ asset('assets/images/dashboard/circle.svg')}}" class="card-img-absolute"
+                    alt="circle-image" />
+                  <h4 class="mb-3 font-weight-normal">Visitors Online <i class="mdi mdi-diamond mdi-24px float-end"></i>
+                  </h4>
+                  <h2 class="mb-5">95,5741</h2>
+                  <h6 class="card-text">Increased by 5%</h6>
                 </div>
               </div>
-              <div class="col-md-4 stretch-card grid-margin">
-                <div class="text-white card bg-gradient-success card-img-holder">
-                  <div class="card-body">
-                    <img src="{{ asset('assets/images/dashboard/circle.svg')}}" class="card-img-absolute" alt="circle-image" />
-                    <h4 class="mb-3 font-weight-normal">Visitors Online <i class="mdi mdi-diamond mdi-24px float-end"></i>
-                    </h4>
-                    <h2 class="mb-5">95,5741</h2>
-                    <h6 class="card-text">Increased by 5%</h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-7 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="clearfix">
+                    <h4 class="card-title float-start">Visit And Sales Statistics</h4>
+                    <div id="visit-sale-chart-legend"
+                      class="rounded-legend legend-horizontal legend-top-right float-end"></div>
+                  </div>
+                  <canvas id="visit-sale-chart" class="mt-4"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Traffic Sources</h4>
+                  <div class="doughnutjs-wrapper d-flex justify-content-center">
+                    <canvas id="traffic-chart"></canvas>
+                  </div>
+                  <div id="traffic-chart-legend" class="pt-4 rounded-legend legend-vertical legend-bottom-left"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Recent Tickets</h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th> Assignee </th>
+                          <th> Subject </th>
+                          <th> Status </th>
+                          <th> Last Update </th>
+                          <th> Tracking ID </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img src="{{ asset('assets/images/faces/face1.jpg')}}" class="me-2" alt="image"> David Grey
+                          </td>
+                          <td> Fund is not recieved </td>
+                          <td>
+                            <label class="badge badge-gradient-success">DONE</label>
+                          </td>
+                          <td> Dec 5, 2017 </td>
+                          <td> WD-12345 </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src="{{ asset('assets/images/faces/face2.jpg')}}" class="me-2" alt="image"> Stella
+                            Johnson
+                          </td>
+                          <td> High loading time </td>
+                          <td>
+                            <label class="badge badge-gradient-warning">PROGRESS</label>
+                          </td>
+                          <td> Dec 12, 2017 </td>
+                          <td> WD-12346 </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src="{{ asset('assets/images/faces/face3.jpg')}}" class="me-2" alt="image"> Marina
+                            Michel
+                          </td>
+                          <td> Website down for one week </td>
+                          <td>
+                            <label class="badge badge-gradient-info">ON HOLD</label>
+                          </td>
+                          <td> Dec 16, 2017 </td>
+                          <td> WD-12347 </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src="{{ asset('assets/images/faces/face4.jpg')}}" class="me-2" alt="image"> John Doe
+                          </td>
+                          <td> Loosing control on server </td>
+                          <td>
+                            <label class="badge badge-gradient-danger">REJECTED</label>
+                          </td>
+                          <td> Dec 3, 2017 </td>
+                          <td> WD-12348 </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-7 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="clearfix">
-                      <h4 class="card-title float-start">Visit And Sales Statistics</h4>
-                      <div id="visit-sale-chart-legend" class="rounded-legend legend-horizontal legend-top-right float-end"></div>
-                    </div>
-                    <canvas id="visit-sale-chart" class="mt-4"></canvas>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-5 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Traffic Sources</h4>
-                    <div class="doughnutjs-wrapper d-flex justify-content-center">
-                      <canvas id="traffic-chart"></canvas>
-                    </div>
-                    <div id="traffic-chart-legend" class="pt-4 rounded-legend legend-vertical legend-bottom-left"></div>
-                  </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 grid-margin stretch-card">
+              <div class="card">
+                <div class="p-0 card-body d-flex">
+                  <div id="inline-datepicker" class="datepicker datepicker-custom"></div>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-12 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Recent Tickets</h4>
-                    <div class="table-responsive">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th> Assignee </th>
-                            <th> Subject </th>
-                            <th> Status </th>
-                            <th> Last Update </th>
-                            <th> Tracking ID </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img src="{{ asset('assets/images/faces/face1.jpg')}}" class="me-2" alt="image"> David Grey
-                            </td>
-                            <td> Fund is not recieved </td>
-                            <td>
-                              <label class="badge badge-gradient-success">DONE</label>
-                            </td>
-                            <td> Dec 5, 2017 </td>
-                            <td> WD-12345 </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src="{{ asset('assets/images/faces/face2.jpg')}}" class="me-2" alt="image"> Stella Johnson
-                            </td>
-                            <td> High loading time </td>
-                            <td>
-                              <label class="badge badge-gradient-warning">PROGRESS</label>
-                            </td>
-                            <td> Dec 12, 2017 </td>
-                            <td> WD-12346 </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src="{{ asset('assets/images/faces/face3.jpg')}}" class="me-2" alt="image"> Marina Michel
-                            </td>
-                            <td> Website down for one week </td>
-                            <td>
-                              <label class="badge badge-gradient-info">ON HOLD</label>
-                            </td>
-                            <td> Dec 16, 2017 </td>
-                            <td> WD-12347 </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src="{{ asset('assets/images/faces/face4.jpg')}}" class="me-2" alt="image"> John Doe
-                            </td>
-                            <td> Loosing control on server </td>
-                            <td>
-                              <label class="badge badge-gradient-danger">REJECTED</label>
-                            </td>
-                            <td> Dec 3, 2017 </td>
-                            <td> WD-12348 </td>
-                          </tr>
-                        </tbody>
-                      </table>
+            <div class="col-lg-7 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Recent Updates</h4>
+                  <div class="d-flex">
+                    <div class="d-flex align-items-center me-4 text-muted font-weight-light">
+                      <i class="mdi mdi-account-outline icon-sm me-2"></i>
+                      <span>jack Menqu</span>
+                    </div>
+                    <div class="d-flex align-items-center text-muted font-weight-light">
+                      <i class="mdi mdi-clock icon-sm me-2"></i>
+                      <span>October 3rd, 2018</span>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-5 grid-margin stretch-card">
-                <div class="card">
-                  <div class="p-0 card-body d-flex">
-                    <div id="inline-datepicker" class="datepicker datepicker-custom"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-7 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Recent Updates</h4>
-                    <div class="d-flex">
-                      <div class="d-flex align-items-center me-4 text-muted font-weight-light">
-                        <i class="mdi mdi-account-outline icon-sm me-2"></i>
-                        <span>jack Menqu</span>
-                      </div>
-                      <div class="d-flex align-items-center text-muted font-weight-light">
-                        <i class="mdi mdi-clock icon-sm me-2"></i>
-                        <span>October 3rd, 2018</span>
-                      </div>
+                  <div class="mt-3 row">
+                    <div class="col-6 pe-1">
+                      <img src="{{ asset('assets/images/dashboard/img_1.jpg')}}" class="mb-2 rounded mw-100 w-100"
+                        alt="image">
+                      <img src="{{ asset('assets/images/dashboard/img_4.jpg')}}" class="rounded mw-100 w-100"
+                        alt="image">
                     </div>
-                    <div class="mt-3 row">
-                      <div class="col-6 pe-1">
-                        <img src="{{ asset('assets/images/dashboard/img_1.jpg')}}" class="mb-2 rounded mw-100 w-100" alt="image">
-                        <img src="{{ asset('assets/images/dashboard/img_4.jpg')}}" class="rounded mw-100 w-100" alt="image">
-                      </div>
-                      <div class="col-6 ps-1">
-                        <img src="{{ asset('assets/images/dashboard/img_2.jpg')}}" class="mb-2 rounded mw-100 w-100" alt="image">
-                        <img src="{{ asset('assets/images/dashboard/img_3.jpg')}}" class="rounded mw-100 w-100" alt="image">
-                      </div>
-                    </div>
-                    <div class="mt-5 d-flex align-items-top">
-                      <img src="{{ asset('assets/images/faces/face3.jpg')}}" class="img-sm rounded-circle me-3" alt="image">
-                      <div class="flex-grow mb-0">
-                        <h5 class="mb-2 me-2">School Website - Authentication Module.</h5>
-                        <p class="mb-0 font-weight-light">It is a long established fact that a reader will be distracted by the readable content of a page.</p>
-                      </div>
-                      <div class="ms-auto">
-                        <i class="mdi mdi-heart-outline text-muted"></i>
-                      </div>
+                    <div class="col-6 ps-1">
+                      <img src="{{ asset('assets/images/dashboard/img_2.jpg')}}" class="mb-2 rounded mw-100 w-100"
+                        alt="image">
+                      <img src="{{ asset('assets/images/dashboard/img_3.jpg')}}" class="rounded mw-100 w-100"
+                        alt="image">
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-7 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Project Status</h4>
-                    <div class="table-responsive">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th> # </th>
-                            <th> Name </th>
-                            <th> Due Date </th>
-                            <th> Progress </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td> 1 </td>
-                            <td> Herman Beck </td>
-                            <td> May 15, 2015 </td>
-                            <td>
-                              <div class="progress">
-                                <div class="progress-bar bg-gradient-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td> 2 </td>
-                            <td> Messsy Adam </td>
-                            <td> Jul 01, 2015 </td>
-                            <td>
-                              <div class="progress">
-                                <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td> 3 </td>
-                            <td> John Richards </td>
-                            <td> Apr 12, 2015 </td>
-                            <td>
-                              <div class="progress">
-                                <div class="progress-bar bg-gradient-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td> 4 </td>
-                            <td> Peter Meggik </td>
-                            <td> May 15, 2015 </td>
-                            <td>
-                              <div class="progress">
-                                <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td> 5 </td>
-                            <td> Edward </td>
-                            <td> May 03, 2015 </td>
-                            <td>
-                              <div class="progress">
-                                <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td> 5 </td>
-                            <td> Ronald </td>
-                            <td> Jun 05, 2015 </td>
-                            <td>
-                              <div class="progress">
-                                <div class="progress-bar bg-gradient-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                  <div class="mt-5 d-flex align-items-top">
+                    <img src="{{ asset('assets/images/faces/face3.jpg')}}" class="img-sm rounded-circle me-3"
+                      alt="image">
+                    <div class="flex-grow mb-0">
+                      <h5 class="mb-2 me-2">School Website - Authentication Module.</h5>
+                      <p class="mb-0 font-weight-light">It is a long established fact that a reader will be distracted
+                        by the readable content of a page.</p>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-5 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title text-dark">Todo List</h4>
-                    <div class="add-items d-flex">
-                      <input type="text" class="form-control todo-list-input" placeholder="What do you need to do today?">
-                      <button class="add btn btn-gradient-primary font-weight-bold todo-list-add-btn" id="add-task">Add</button>
-                    </div>
-                    <div class="list-wrapper">
-                      <ul class="d-flex flex-column-reverse todo-list todo-list-custom">
-                        <li>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox"> Meeting with Alisa </label>
-                          </div>
-                          <i class="remove mdi mdi-close-circle-outline"></i>
-                        </li>
-                        <li class="completed">
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox" checked> Call John </label>
-                          </div>
-                          <i class="remove mdi mdi-close-circle-outline"></i>
-                        </li>
-                        <li>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox"> Create invoice </label>
-                          </div>
-                          <i class="remove mdi mdi-close-circle-outline"></i>
-                        </li>
-                        <li>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox"> Print Statements </label>
-                          </div>
-                          <i class="remove mdi mdi-close-circle-outline"></i>
-                        </li>
-                        <li class="completed">
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox" checked> Prepare for presentation </label>
-                          </div>
-                          <i class="remove mdi mdi-close-circle-outline"></i>
-                        </li>
-                        <li>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox"> Pick up kids from school </label>
-                          </div>
-                          <i class="remove mdi mdi-close-circle-outline"></i>
-                        </li>
-                      </ul>
+                    <div class="ms-auto">
+                      <i class="mdi mdi-heart-outline text-muted"></i>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-          @include('layouts.footer') 
-          <!-- partial -->
+          <div class="row">
+            <div class="col-md-7 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Project Status</h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th> # </th>
+                          <th> Name </th>
+                          <th> Due Date </th>
+                          <th> Progress </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> 1 </td>
+                          <td> Herman Beck </td>
+                          <td> May 15, 2015 </td>
+                          <td>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-success" role="progressbar" style="width: 25%"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 2 </td>
+                          <td> Messsy Adam </td>
+                          <td> Jul 01, 2015 </td>
+                          <td>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 75%"
+                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 3 </td>
+                          <td> John Richards </td>
+                          <td> Apr 12, 2015 </td>
+                          <td>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-warning" role="progressbar" style="width: 90%"
+                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 4 </td>
+                          <td> Peter Meggik </td>
+                          <td> May 15, 2015 </td>
+                          <td>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 50%"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 5 </td>
+                          <td> Edward </td>
+                          <td> May 03, 2015 </td>
+                          <td>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 35%"
+                                aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> 5 </td>
+                          <td> Ronald </td>
+                          <td> Jun 05, 2015 </td>
+                          <td>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-info" role="progressbar" style="width: 65%"
+                                aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title text-dark">Todo List</h4>
+                  <div class="add-items d-flex">
+                    <input type="text" class="form-control todo-list-input" placeholder="What do you need to do today?">
+                    <button class="add btn btn-gradient-primary font-weight-bold todo-list-add-btn"
+                      id="add-task">Add</button>
+                  </div>
+                  <div class="list-wrapper">
+                    <ul class="d-flex flex-column-reverse todo-list todo-list-custom">
+                      <li>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox"> Meeting with Alisa </label>
+                        </div>
+                        <i class="remove mdi mdi-close-circle-outline"></i>
+                      </li>
+                      <li class="completed">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox" checked> Call John </label>
+                        </div>
+                        <i class="remove mdi mdi-close-circle-outline"></i>
+                      </li>
+                      <li>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox"> Create invoice </label>
+                        </div>
+                        <i class="remove mdi mdi-close-circle-outline"></i>
+                      </li>
+                      <li>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox"> Print Statements </label>
+                        </div>
+                        <i class="remove mdi mdi-close-circle-outline"></i>
+                      </li>
+                      <li class="completed">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox" checked> Prepare for presentation </label>
+                        </div>
+                        <i class="remove mdi mdi-close-circle-outline"></i>
+                      </li>
+                      <li>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="checkbox" type="checkbox"> Pick up kids from school </label>
+                        </div>
+                        <i class="remove mdi mdi-close-circle-outline"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- main-panel ends -->
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        @include('layouts.footer')
+        <!-- partial -->
       </div>
-      <!-- page-body-wrapper ends -->
+      <!-- main-panel ends -->
     </div>
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-    @include('layouts.js') 
-    <!-- End custom js for this page -->
-  </body>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  @include('layouts.js')
+  <!-- End custom js for this page -->
+</body>
+
 </html>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\DashboardController;
 
 use App\Http\Controllers\Auth\AuthController;
 
@@ -15,9 +16,7 @@ Route::get('/upload', function () {
     return view('upload');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 
 Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
@@ -26,7 +25,6 @@ Route::get('register', [AuthController::class, 'showRegistrationForm'])->name('r
 Route::post('register', [AuthController::class, 'register']);
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
-// Dashboard route (only accessible if logged in)
-Route::middleware(['auth'])->get('dashboard', function () {
-    return view('welcome');
-})->name('dashboard');
+
+Route::middleware(['auth'])->get('/', [DashboardController::class, 'showMenu'])->name('dashboard');
+Route::middleware(['auth'])->get('dashboard', [DashboardController::class, 'showMenu'])->name('dashboard');
