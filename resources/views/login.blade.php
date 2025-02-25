@@ -10,10 +10,8 @@
           <div class="mx-auto col-lg-4">
             <div class="p-5 text-left auth-form-light">
               <div class="brand-logo">
-                <img src="{{  asset('assets/images/logo.svg') }}">
+                <img src="{{  asset('assets/images/logo.jpeg') }}">
               </div>
-              <h4>Hello! let's get started</h4>
-
               @if($errors->any())
               <div>
                 <ul>
@@ -38,7 +36,7 @@
                 </div>
                 <div class="gap-2 mt-3 d-grid">
                   <button type="submit"
-                    class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">SIGN IN</button>
+                    class="btn btn-block btn-gradient-success btn-lg font-weight-medium auth-form-btn">SIGN IN</button>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                   <div class="form-check">

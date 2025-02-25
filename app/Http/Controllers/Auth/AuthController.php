@@ -50,6 +50,7 @@ class AuthController extends Controller
     // Handle login
     public function login(Request $request)
     {
+        // return "tess";
         $request->validate([
             'username' => 'required',
             'password' => 'required|min:6',
