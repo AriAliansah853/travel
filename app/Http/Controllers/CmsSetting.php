@@ -10,8 +10,8 @@ class CmsSetting extends Controller
     public function SettingCms()
     {
          // Query untuk mengambil data menu utama dan submenu
-         $menus = DB::table('MenuUtama as m')
-         ->leftJoin('SubMenu as s', 'm.menu_id', '=', 's.menu_id')
+         $menus = DB::table('menuutama as m')
+         ->leftJoin('submenu as s', 'm.menu_id', '=', 's.menu_id')
          ->where('m.status', 'aktif')
          ->select('m.menu_id', 'm.nama_menu', 's.submenu_id', 's.nama_submenu', 's.url','m.icon','m.menuUrl')
          ->orderBy('m.urutan')

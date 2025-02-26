@@ -67,101 +67,8 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-7 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <div class="clearfix">
-                    <h4 class="card-title float-start">Visit And Sales Statistics</h4>
-                    <div id="visit-sale-chart-legend"
-                      class="rounded-legend legend-horizontal legend-top-right float-end"></div>
-                  </div>
-                  <canvas id="visit-sale-chart" class="mt-4"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-5 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Traffic Sources</h4>
-                  <div class="doughnutjs-wrapper d-flex justify-content-center">
-                    <canvas id="traffic-chart"></canvas>
-                  </div>
-                  <div id="traffic-chart-legend" class="pt-4 rounded-legend legend-vertical legend-bottom-left"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 grid-margin">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Recent Tickets</h4>
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th> Assignee </th>
-                          <th> Subject </th>
-                          <th> Status </th>
-                          <th> Last Update </th>
-                          <th> Tracking ID </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <img src="{{ asset('assets/images/faces/face1.jpg')}}" class="me-2" alt="image"> David Grey
-                          </td>
-                          <td> Fund is not recieved </td>
-                          <td>
-                            <label class="badge badge-gradient-success">DONE</label>
-                          </td>
-                          <td> Dec 5, 2017 </td>
-                          <td> WD-12345 </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <img src="{{ asset('assets/images/faces/face2.jpg')}}" class="me-2" alt="image"> Stella
-                            Johnson
-                          </td>
-                          <td> High loading time </td>
-                          <td>
-                            <label class="badge badge-gradient-warning">PROGRESS</label>
-                          </td>
-                          <td> Dec 12, 2017 </td>
-                          <td> WD-12346 </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <img src="{{ asset('assets/images/faces/face3.jpg')}}" class="me-2" alt="image"> Marina
-                            Michel
-                          </td>
-                          <td> Website down for one week </td>
-                          <td>
-                            <label class="badge badge-gradient-info">ON HOLD</label>
-                          </td>
-                          <td> Dec 16, 2017 </td>
-                          <td> WD-12347 </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <img src="{{ asset('assets/images/faces/face4.jpg')}}" class="me-2" alt="image"> John Doe
-                          </td>
-                          <td> Loosing control on server </td>
-                          <td>
-                            <label class="badge badge-gradient-danger">REJECTED</label>
-                          </td>
-                          <td> Dec 3, 2017 </td>
-                          <td> WD-12348 </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+
           <div class="row">
             <div class="col-lg-5 grid-margin stretch-card">
               <div class="card">
@@ -186,24 +93,25 @@
                   </div>
                   <div class="mt-3 row">
                     <div class="col-6 pe-1">
-                      <img src="{{ asset('assets/images/dashboard/img_1.jpg')}}" class="mb-2 rounded mw-100 w-100"
+                      <img src="{{ asset('assets/images/dashboard/img_1.jpg') }}" class="mb-2 rounded mw-100 w-100"
                         alt="image">
-                      <img src="{{ asset('assets/images/dashboard/img_4.jpg')}}" class="rounded mw-100 w-100"
+                      <img src="{{ asset('assets/images/dashboard/img_4.jpg') }}" class="rounded mw-100 w-100"
                         alt="image">
                     </div>
                     <div class="col-6 ps-1">
-                      <img src="{{ asset('assets/images/dashboard/img_2.jpg')}}" class="mb-2 rounded mw-100 w-100"
+                      <img src="{{ asset('assets/images/dashboard/img_2.jpg') }}" class="mb-2 rounded mw-100 w-100"
                         alt="image">
-                      <img src="{{ asset('assets/images/dashboard/img_3.jpg')}}" class="rounded mw-100 w-100"
+                      <img src="{{ asset('assets/images/dashboard/img_3.jpg') }}" class="rounded mw-100 w-100"
                         alt="image">
                     </div>
                   </div>
                   <div class="mt-5 d-flex align-items-top">
-                    <img src="{{ asset('assets/images/faces/face3.jpg')}}" class="img-sm rounded-circle me-3"
+                    <img src="{{ asset('assets/images/faces/face3.jpg') }}" class="img-sm rounded-circle me-3"
                       alt="image">
                     <div class="flex-grow mb-0">
                       <h5 class="mb-2 me-2">School Website - Authentication Module.</h5>
-                      <p class="mb-0 font-weight-light">It is a long established fact that a reader will be distracted
+                      <p class="mb-0 font-weight-light">It is a long established fact that a
+                        reader will be distracted
                         by the readable content of a page.</p>
                     </div>
                     <div class="ms-auto">
