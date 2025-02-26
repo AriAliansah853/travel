@@ -32,8 +32,9 @@ Route::post('login', [AuthController::class, 'login']);
 Route::get('register', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('register', [AuthController::class, 'register']);
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('coba', [DashboardController::class, 'showMenu'])->name('coba');
 
 
 Route::middleware(['auth'])->get('/', [DashboardController::class, 'showMenu'])->name('dashboard');
-Route::middleware(['auth'])->get('/dashboard', [DashboardController::class, 'showMenu'])->name('dashboard');
-Route::middleware(['auth'])->get('/setting-cms', [CmsSetting::class, 'SettingCms'])->name('setting-cms');
+Route::middleware(['auth'])->get('dashboard', [DashboardController::class, 'showMenu'])->name('dashboard');
+Route::middleware(['auth'])->get('setting-cms', [CmsSetting::class, 'SettingCms'])->name('setting-cms');
