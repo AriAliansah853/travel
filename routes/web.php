@@ -35,5 +35,5 @@ Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
 
 Route::middleware(['auth'])->get('/', [DashboardController::class, 'showMenu'])->name('dashboard');
-Route::middleware(['auth'])->get('dashboard', [DashboardController::class, 'showMenu'])->name('dashboard');
-Route::middleware(['auth'])->get('setting-cms', [CmsSetting::class, 'SettingCms'])->name('setting-cms');
+Route::middleware(['auth'])->get('/dashboard', [DashboardController::class, 'showMenu'])->name('dashboard');
+Route::middleware(['auth'])->get('/setting-cms', [CmsSetting::class, 'SettingCms'])->name('setting-cms');
