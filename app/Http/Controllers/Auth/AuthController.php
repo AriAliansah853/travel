@@ -65,6 +65,8 @@ class AuthController extends Controller
         return back()->withErrors(['username' => 'Invalid credentials.']);
     }
 // test sssaaaaaaaaaaaaaaaaaaaaaa
+
+// 
     // Log out
     public function logout()
     {
