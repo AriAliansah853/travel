@@ -259,7 +259,7 @@
                     }
                 });
             }
-
+//
             // <button class="add btn btn-gradient-primary font-weight-bold todo-list-add-btn"  editBtn>Edit</button>
             // <button class="add btn btn-gradient-danger font-weight-bold todo-list-add-btn"  data-id="${ row.id }">Delete</button>
             // Ambil data pertama kali tanpa filter
