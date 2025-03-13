@@ -16,13 +16,13 @@ Route::get('/upload2', function () {
     return view('upload');
 });
 
-Route::get('/test', function () {
+Route::get('/test2', function () {
     return view('ari');
 });
-Route::get('/gallery', function () {
+Route::get('/gallery2', function () {
     return view('galery');
 });
-Route::get('/love-letter', function () {
+Route::get('/love-letter2', function () {
     return view('love-letter');
 });
 
