@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.5 on win32)" generated="2025-03-07T14:58:35.369584" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="c:\Users\ITAM1087\travel\tests\Robot\TestCases\login_test.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-03-07T14:58:35.797244" level="INFO">Opening browser 'chrome' to base url 'https://boss-pre.fuse.co.id/#/login'.</msg>
+<arg>https://boss-pre.fuse.co.id/#/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-07T14:58:35.797244" elapsed="3.177340"/>
+</kw>
+<test id="s1-t1" name="Valid Login Test" line="16">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-07T14:58:38.978904" level="INFO">Typing text 'ceo001' into text field 'name=accountId'.</msg>
+<arg>name=accountId</arg>
+<arg>ceo001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-07T14:58:38.977588" elapsed="0.296049"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-07T14:58:39.277645" level="INFO">Typing text 'Password2024!@1218' into text field 'name=passWord'.</msg>
+<arg>name=passWord</arg>
+<arg>Password2024!@1218</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-07T14:58:39.276641" elapsed="0.356611"/>
+</kw>
+<kw name="Drag Element And Verify Width">
+<kw name="Fail" owner="BuiltIn">
+<msg time="2025-03-07T14:58:39.636269" level="FAIL">Not Implemented</msg>
+<arg>Not Implemented</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2025-03-07T14:58:39.636269" elapsed="0.002398">Not Implemented</status>
+</kw>
+<arg>${DRAGGABLE}</arg>
+<arg>${EXPECTED_WIDTH}</arg>
+<status status="FAIL" start="2025-03-07T14:58:39.634270" elapsed="0.005398">Not Implemented</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-03-07T14:58:39.640667" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-03-07T14:58:38.975579" elapsed="0.666825">Not Implemented</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-07T14:58:39.645882" elapsed="2.367254"/>
+</kw>
+<status status="FAIL" start="2025-03-07T14:58:35.378790" elapsed="6.634737"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="0" fail="1" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -226,6 +226,7 @@
   @include('layouts.js')
   <script>
     $(document).ready(function() {
+      let assetBaseUrl = "{{ asset('assets/images/') }}";
             // Fungsi untuk mengambil data banner berdasarkan pencarian
             function getData(search = '') {
                 $.ajax({
@@ -241,12 +242,13 @@
                             let tr = `<tr>
                             <td>${row.id}</td>
                             <td>${row.judul}</td>
-                            <td>${row.deskripsi}</td>
-                            <td><img src="/storage/${row.gambar}" alt="Gambar Banner" width="100"></td>
+                            <td>${row.deskripsi}</td> 
+                            <td><img src="${assetBaseUrl}/faces/${row.gambar}" alt="Gambar Banner" width="100"></td>
                             <td>${row.status}</td>
                             <td>
-                                <button class="btn btn-warning btn-sm editBtn">Edit</button>
-                                <button class="btn btn-danger btn-sm deleteBtn" data-id="${row.id}">Delete</button>
+                                
+                                 <button class="add btn btn-gradient-primary font-weight-bold todo-list-add-btn"  editBtn>Edit</button>
+                                 <button class="add btn btn-gradient-danger font-weight-bold todo-list-add-btn"  data-id="${ row.id }">Delete</button>
                             </td>
                         </tr>`;
                             tableBody.append(tr);
@@ -257,7 +259,9 @@
                     }
                 });
             }
-
+//
+            // <button class="add btn btn-gradient-primary font-weight-bold todo-list-add-btn"  editBtn>Edit</button>
+            // <button class="add btn btn-gradient-danger font-weight-bold todo-list-add-btn"  data-id="${ row.id }">Delete</button>
             // Ambil data pertama kali tanpa filter
             getData();
 
@@ -266,12 +270,13 @@
                 let searchValue = $(this).val(); // Ambil nilai input pencarian
                 getData(searchValue); // Ambil data dengan filter pencarian
             });
+            
 
             // Menghapus banner promosi
             $('body').on('click', '.deleteBtn', function() {
                 let id = $(this).data('id');
                 let token = $('meta[name="csrf-token"]').attr('content'); // Get CSRF token from meta tag
-
+               
                 if (confirm('Apakah Anda yakin ingin menghapus banner ini?')) {
                     $.ajax({
                         url: '/api/banner-promosi/' + id,
