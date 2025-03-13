@@ -12,7 +12,7 @@ Route::get('/generate1', [DocumentController::class, 'generate1']);
 // Route::get('/login', [Auth::class, 'login'])->name('login');
 
 
-Route::get('/upload', function () {
+Route::get('/upload2', function () {
     return view('upload');
 });
 
