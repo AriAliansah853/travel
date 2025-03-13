@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.5 on win32)" generated="2025-03-07T14:58:37.336568" rpa="false" schemaversion="5">
+<suite id="s1" name="Travel" source="c:\Users\ITAM1087\travel">
+<suite id="s1-s1" name="Tests" source="c:\Users\ITAM1087\travel\tests">
+<suite id="s1-s1-s1" name="Robot" source="c:\Users\ITAM1087\travel\tests\Robot">
+<suite id="s1-s1-s1-s1" name="TestCases" source="c:\Users\ITAM1087\travel\tests\Robot\TestCases">
+<suite id="s1-s1-s1-s1-s1" name="Login Test" source="c:\Users\ITAM1087\travel\tests\Robot\TestCases\login_test.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-03-07T14:58:38.286458" level="INFO">Opening browser 'chrome' to base url 'https://boss-pre.fuse.co.id/#/login'.</msg>
+<arg>https://boss-pre.fuse.co.id/#/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-07T14:58:38.285458" elapsed="3.381225"/>
+</kw>
+<test id="s1-s1-s1-s1-s1-t1" name="Valid Login Test" line="16">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-07T14:58:41.668907" level="INFO">Typing text 'ceo001' into text field 'name=accountId'.</msg>
+<arg>name=accountId</arg>
+<arg>ceo001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-07T14:58:41.667902" elapsed="0.263792"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-07T14:58:41.933228" level="INFO">Typing text 'Password2024!@1218' into text field 'name=passWord'.</msg>
+<arg>name=passWord</arg>
+<arg>Password2024!@1218</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-07T14:58:41.932206" elapsed="0.339321"/>
+</kw>
+<kw name="Drag Element And Verify Width">
+<kw name="Fail" owner="BuiltIn">
+<msg time="2025-03-07T14:58:42.274432" level="FAIL">Not Implemented</msg>
+<arg>Not Implemented</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2025-03-07T14:58:42.273382" elapsed="0.002454">Not Implemented</status>
+</kw>
+<arg>${DRAGGABLE}</arg>
+<arg>${EXPECTED_WIDTH}</arg>
+<status status="FAIL" start="2025-03-07T14:58:42.272419" elapsed="0.004508">Not Implemented</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-03-07T14:58:42.277446" elapsed="0.001021"/>
+</kw>
+<status status="FAIL" start="2025-03-07T14:58:41.666683" elapsed="0.611784">Not Implemented</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-07T14:58:42.281529" elapsed="2.592615"/>
+</kw>
+<status status="FAIL" start="2025-03-07T14:58:37.401574" elapsed="7.473569"/>
+</suite>
+<status status="FAIL" start="2025-03-07T14:58:37.396279" elapsed="7.483858"/>
+</suite>
+<status status="FAIL" start="2025-03-07T14:58:37.390720" elapsed="7.492967"/>
+</suite>
+<status status="FAIL" start="2025-03-07T14:58:37.384774" elapsed="7.503909"/>
+</suite>
+<status status="FAIL" start="2025-03-07T14:58:37.349488" elapsed="7.545322"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Travel" id="s1" pass="0" fail="1" skip="0">Travel</stat>
+<stat name="Tests" id="s1-s1" pass="0" fail="1" skip="0">Travel.Tests</stat>
+<stat name="Robot" id="s1-s1-s1" pass="0" fail="1" skip="0">Travel.Tests.Robot</stat>
+<stat name="TestCases" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">Travel.Tests.Robot.TestCases</stat>
+<stat name="Login Test" id="s1-s1-s1-s1-s1" pass="0" fail="1" skip="0">Travel.Tests.Robot.TestCases.Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

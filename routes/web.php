@@ -16,6 +16,15 @@ Route::get('/upload', function () {
     return view('upload');
 });
 
+Route::get('/test', function () {
+    return view('ari');
+});
+Route::get('/gallery', function () {
+    return view('galery');
+});
+Route::get('/love-letter', function () {
+    return view('love-letter');
+});
 
 // nanti kasih auth
 
