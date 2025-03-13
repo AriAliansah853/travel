@@ -25,7 +25,7 @@ Route::get('/gallery', function () {
 Route::get('/love-letter', function () {
     return view('love-letter');
 });
-//
+
 // nanti kasih auth
 
 
