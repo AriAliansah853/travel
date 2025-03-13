@@ -8,11 +8,11 @@ use App\Http\Controllers\Auth\AuthController;
 
 
 Route::post('/convert-docx-to-pdf', [DocumentController::class, 'convertToPdf']);
-Route::get('/generate1', [DocumentController::class, 'generate1']);
+Route::get('/generate2', [DocumentController::class, 'generate1']);
 // Route::get('/login', [Auth::class, 'login'])->name('login');
 
 
-Route::get('/upload2', function () {
+Route::get('/upload3', function () {
     return view('upload');
 });
 
