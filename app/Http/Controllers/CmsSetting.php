@@ -74,4 +74,9 @@ class CmsSetting extends Controller
         }
         return response()->json(['message' => 'Data tidak ditemukan!'], 404);
     }
+
+
+    function Test(){
+        
+    }
 }

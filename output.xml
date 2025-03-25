@@ -1,50 +1,486 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.5 on win32)" generated="2025-03-07T14:58:35.369584" rpa="false" schemaversion="5">
-<suite id="s1" name="Login Test" source="c:\Users\ITAM1087\travel\tests\Robot\TestCases\login_test.robot">
+<robot generator="Robot 7.2.2 (Python 3.12.5 on win32)" generated="2025-03-18T18:46:19.365962" rpa="false" schemaversion="5">
+<suite id="s1" name="OrderWebsiteProperty" source="c:\Users\ITAM1087\travel\tests\Robot\TestCases\OrderWebsiteProperty.robot">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2025-03-07T14:58:35.797244" level="INFO">Opening browser 'chrome' to base url 'https://boss-pre.fuse.co.id/#/login'.</msg>
-<arg>https://boss-pre.fuse.co.id/#/login</arg>
+<msg time="2025-03-18T18:46:20.371482" level="INFO">Opening browser 'chrome' to base url 'https://dev.cekpremistage.com/uat/cekpremi/'.</msg>
+<arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-07T14:58:35.797244" elapsed="3.177340"/>
+<status status="PASS" start="2025-03-18T18:46:20.367143" elapsed="5.199899"/>
 </kw>
-<test id="s1-t1" name="Valid Login Test" line="16">
+<test id="s1-t1" name="Valid Login Test" line="31">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-18T18:46:25.571577" elapsed="0.194157"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-18T18:46:28.785552" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-18T18:46:25.784028" elapsed="3.002053"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-18T18:46:28.789935" level="INFO">Executing JavaScript:
+document.getElementById('burger').style.display = 'block'
+Without any arguments.</msg>
+<msg time="2025-03-18T18:46:29.112418" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF791C1FE45+26629]
+	(No symbol) [0x00007FF791B86010]
+	(No symbol) [0x00007FF791A1914C]
+	(No symbol) [0x00007FF791A5F75F]
+	(No symbol) [0x00007FF791A97972]
+	(No symbol) [0x00007FF791A922CE]
+	(No symbol) [0x00007FF791A91379]
+	(No symbol) [0x00007FF7919E55E5]
+	GetHandleVerifier [0x00007FF791F772BD+3529853]
+	GetHandleVerifier [0x00007FF791F8DA22+3621858]
+	GetHandleVerifier [0x00007FF791F824D3+3575443]
+	GetHandleVerifier [0x00007FF791CEB77A+860474]
+	(No symbol) [0x00007FF791B9088F]
+	(No symbol) [0x00007FF7919E41FF]
+	GetHandleVerifier [0x00007FF791FFECD8+4085400]
+	BaseThreadInitThunk [0x00007FFDC364259D+29]
+	RtlUserThreadStart [0x00007FFDC436AF38+40]
+</msg>
+<msg time="2025-03-18T18:46:29.120825" level="FAIL">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=134.0.6998.89)
+Stacktrace:
+	GetHandleVerifier [0x00007FF791C1FE45+26629]
+	(No symbol) [0x00007FF791B86010]
+	(No symbol) [0x00007FF791A1931A]
+	(No symbol) [0x00007FF791A04F65]
+	(No symbol) [0x00007FF791A29E04]
+	(No symbol) [0x00007FF791A9F85F]
+	(No symbol) [0x00007FF791ABFA55]
+	(No symbol) [0x00007FF791A97883]
+	(No symbol) [0x00007FF791A60550]
+	(No symbol) [0x00007FF791A61803]
+	GetHandleVerifier [0x00007FF791F772BD+3529853]
+	GetHandleVerifier [0x00007FF791F8DA22+3621858]
+	GetHandleVerifier [0x00007FF791F824D3+3575443]
+	GetHandleVerifier [0x00007FF791CEB77A+860474]
+	(No symbol) [0x00007FF791B9088F]
+	(No symbol) [0x00007FF791B8CBC4]
+	(No symbol) [0x00007FF791B8CD66]
+	(No symbol) [0x00007FF791B7C2C9]
+	BaseThreadInitThunk [0x00007FFDC364259D+29]
+	RtlUserThreadStart [0x00007FFDC436AF38+40]
+</msg>
+<arg>document.getElementById('burger').style.display = 'block'</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="FAIL" start="2025-03-18T18:46:28.786081" elapsed="0.341865">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=134.0.6998.89)
+Stacktrace:
+	GetHandleVerifier [0x00007FF791C1FE45+26629]
+	(No symbol) [0x00007FF791B86010]
+	(No symbol) [0x00007FF791A1931A]
+	(No symbol) [0x00007FF791A04F65]
+	(No symbol) [0x00007FF791A29E04]
+	(No symbol) [0x00007FF791A9F85F]
+	(No symbol) [0x00007FF791ABFA55]
+	(No symbol) [0x00007FF791A97883]
+	(No symbol) [0x00007FF791A60550]
+	(No symbol) [0x00007FF791A61803]
+	GetHandleVerifier [0x00007FF791F772BD+3529853]
+	GetHandleVerifier [0x00007FF791F8DA22+3621858]
+	GetHandleVerifier [0x00007FF791F824D3+3575443]
+	GetHandleVerifier [0x00007FF791CEB77A+860474]
+	(No symbol) [0x00007FF791B9088F]
+	(No symbol) [0x00007FF791B8CBC4]
+	(No symbol) [0x00007FF791B8CD66]
+	(No symbol) [0x00007FF791B7C2C9]
+	BaseThreadInitThunk [0x00007FFDC364259D+29]
+	RtlUserThreadStart [0x00007FFDC436AF38+40]
+</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=burger</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.132469" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=burger</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.132469" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.132469" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=home-login-btn</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.132469" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=home-login-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.132469" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.143617" elapsed="0.000428"/>
+</kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-07T14:58:38.978904" level="INFO">Typing text 'ceo001' into text field 'name=accountId'.</msg>
-<arg>name=accountId</arg>
-<arg>ceo001</arg>
+<arg>id=hp</arg>
+<arg>082111371287</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-07T14:58:38.977588" elapsed="0.296049"/>
+<status status="NOT RUN" start="2025-03-18T18:46:29.145987" elapsed="0.000000"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>Fate090700#</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.149175" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.149818" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=btn-login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.149818" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.149818" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>https://dev.cekpremistage.com/uat/indotekno/asuransi-properti/data-form/insured-data/5cb0a08c-c6fa-4f59-a013-88f3461df8ea/220</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.156397" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//button[@data-target='modal2']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.156397" elapsed="0.003521"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.161342" elapsed="0.000665"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//span[@aria-label='March 21, 2025']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.162284" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.162284" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=saveTgl</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.162284" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.162284" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//button[@data-target='modal1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.162284" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.177107" elapsed="0.000951"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-07T14:58:39.277645" level="INFO">Typing text 'Password2024!@1218' into text field 'name=passWord'.</msg>
-<arg>name=passWord</arg>
-<arg>Password2024!@1218</arg>
+<arg>id=inputAlamat1</arg>
+<arg>02</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-07T14:58:39.276641" elapsed="0.356611"/>
+<status status="NOT RUN" start="2025-03-18T18:46:29.178925" elapsed="0.000000"/>
 </kw>
-<kw name="Drag Element And Verify Width">
-<kw name="Fail" owner="BuiltIn">
-<msg time="2025-03-07T14:58:39.636269" level="FAIL">Not Implemented</msg>
-<arg>Not Implemented</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="FAIL" start="2025-03-07T14:58:39.636269" elapsed="0.002398">Not Implemented</status>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.180883" elapsed="0.000515"/>
 </kw>
-<arg>${DRAGGABLE}</arg>
-<arg>${EXPECTED_WIDTH}</arg>
-<status status="FAIL" start="2025-03-07T14:58:39.634270" elapsed="0.005398">Not Implemented</status>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=inputAlamat2</arg>
+<arg>03</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.188098" elapsed="0.000000"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-03-07T14:58:39.640667" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.191533" elapsed="0.000930"/>
 </kw>
-<status status="FAIL" start="2025-03-07T14:58:38.975579" elapsed="0.666825">Not Implemented</status>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=inputAlamat3</arg>
+<arg>TEST JALAN JALAN</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.194385" elapsed="0.000118"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.195810" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=saveButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.196623" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.196623" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=btn-upload-car0</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.196623" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.196623" elapsed="0.000000"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<arg>id=uploadInput0</arg>
+<arg>${FILE}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.196623" elapsed="0.011610"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>NONE</arg>
+<arg>ESC</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.209712" elapsed="0.001054"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.212263" elapsed="0.004621"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=btn-upload-car1</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.216884" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.220922" elapsed="0.000000"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<arg>id=uploadInput1</arg>
+<arg>${FILE}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.223386" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>NONE</arg>
+<arg>ESC</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.224403" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.229785" elapsed="0.001342"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=btn-upload-car2</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.232179" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.232179" elapsed="0.000000"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<arg>id=uploadInput2</arg>
+<arg>${FILE}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.235795" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>NONE</arg>
+<arg>ESC</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.239112" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.240646" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=btn-upload-car3</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.245315" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.246973" elapsed="0.001451"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<arg>id=uploadInput3</arg>
+<arg>${FILE}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.248424" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>NONE</arg>
+<arg>ESC</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.248424" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.253167" elapsed="0.000735"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=btn-upload-car4</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.256423" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.258114" elapsed="0.000000"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<arg>id=uploadInput4</arg>
+<arg>${FILE}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.260559" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>NONE</arg>
+<arg>ESC</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.263485" elapsed="0.000698"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.265643" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=btn-upload-car5</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.271115" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.271115" elapsed="0.004982"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<arg>id=uploadInput5</arg>
+<arg>${FILE}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.277395" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>NONE</arg>
+<arg>ESC</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.281295" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.282260" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=getDataButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.282260" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.286903" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='skCheckbox']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.286903" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.286903" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=skCheckbox</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.286903" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>document.getElementById('skCheckbox').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.296052" elapsed="0.000662"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.298579" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=submitButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.300776" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-18T18:46:29.303571" elapsed="0.000865"/>
+</kw>
+<status status="FAIL" start="2025-03-18T18:46:25.567042" elapsed="3.752490">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=134.0.6998.89)
+Stacktrace:
+	GetHandleVerifier [0x00007FF791C1FE45+26629]
+	(No symbol) [0x00007FF791B86010]
+	(No symbol) [0x00007FF791A1931A]
+	(No symbol) [0x00007FF791A04F65]
+	(No symbol) [0x00007FF791A29E04]
+	(No symbol) [0x00007FF791A9F85F]
+	(No symbol) [0x00007FF791ABFA55]
+	(No symbol) [0x00007FF791A97883]
+	(No symbol) [0x00007FF791A60550]
+	(No symbol) [0x00007FF791A61803]
+	GetHandleVerifier [0x00007FF791F772BD+3529853]
+	GetHandleVerifier [0x00007FF791F8DA22+3621858]
+	GetHandleVerifier [0x00007FF791F824D3+3575443]
+	GetHandleVerifier [0x00007FF791CEB77A+860474]
+	(No symbol) [0x00007FF791B9088F]
+	(No symbol) [0x00007FF791B8CBC4]
+	(No symbol) [0x00007FF791B8CD66]
+	(No symbol) [0x00007FF791B7C2C9]
+	BaseThreadInitThunk [0x00007FFDC364259D+29]
+	RtlUserThreadStart [0x00007FFDC436AF38+40]
+</status>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-07T14:58:39.645882" elapsed="2.367254"/>
+<status status="PASS" start="2025-03-18T18:46:29.338824" elapsed="2.102674"/>
 </kw>
-<status status="FAIL" start="2025-03-07T14:58:35.378790" elapsed="6.634737"/>
+<status status="FAIL" start="2025-03-18T18:46:19.376463" elapsed="12.065035"/>
 </suite>
 <statistics>
 <total>
@@ -53,9 +489,40 @@
 <tag>
 </tag>
 <suite>
-<stat name="Login Test" id="s1" pass="0" fail="1" skip="0">Login Test</stat>
+<stat name="OrderWebsiteProperty" id="s1" pass="0" fail="1" skip="0">OrderWebsiteProperty</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-03-18T18:46:19.606195" level="ERROR">Error in file 'c:\Users\ITAM1087\travel\tests\Robot\TestCases\OrderWebsiteProperty.robot' on line 2: Initializing library 'SeleniumLibrary' with arguments [ screenshot=None ] failed: ValueError: Invalid time string 'screenshot=None'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\SeleniumLibrary\__init__.py", line 476, in __init__
+    self.timeout = _convert_timeout(timeout)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\SeleniumLibrary\utils\types.py", line 42, in _convert_timeout
+    return timestr_to_secs(timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\robot\utils\robottime.py", line 59, in timestr_to_secs
+    raise ValueError(f"Invalid time string '{timestr}'.")
+ValueError: Invalid time string 'screenshot=None'.</msg>
+<msg time="2025-03-18T18:46:29.112418" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF791C1FE45+26629]
+	(No symbol) [0x00007FF791B86010]
+	(No symbol) [0x00007FF791A1914C]
+	(No symbol) [0x00007FF791A5F75F]
+	(No symbol) [0x00007FF791A97972]
+	(No symbol) [0x00007FF791A922CE]
+	(No symbol) [0x00007FF791A91379]
+	(No symbol) [0x00007FF7919E55E5]
+	GetHandleVerifier [0x00007FF791F772BD+3529853]
+	GetHandleVerifier [0x00007FF791F8DA22+3621858]
+	GetHandleVerifier [0x00007FF791F824D3+3575443]
+	GetHandleVerifier [0x00007FF791CEB77A+860474]
+	(No symbol) [0x00007FF791B9088F]
+	(No symbol) [0x00007FF7919E41FF]
+	GetHandleVerifier [0x00007FF791FFECD8+4085400]
+	BaseThreadInitThunk [0x00007FFDC364259D+29]
+	RtlUserThreadStart [0x00007FFDC436AF38+40]
+</msg>
 </errors>
 </robot>

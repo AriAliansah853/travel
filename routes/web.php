@@ -16,6 +16,10 @@ Route::get('/upload5', function () {
     return view('ari');
 });
 
+Route::get('/testAR', function () {
+    return view('testari');
+});
+
 Route::get('/test2', function () {
     return view('ari');
 });

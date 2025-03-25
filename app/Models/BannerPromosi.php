@@ -10,4 +10,5 @@ class BannerPromosi extends Model
     protected $table = 'banner_promosi';
     protected $primaryKey = 'id';
     public $timestamps = false;
+    
 }
