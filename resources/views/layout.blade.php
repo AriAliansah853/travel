@@ -23,8 +23,7 @@
             padding: 20px;
             border-radius: 10px;
             display: none; z-index: 999;
-            margin-top:200px
-         }
+            margin-top:200px }
     </style>
 </head>
 <body>

@@ -5,6 +5,10 @@ use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CmsSetting;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\PhotoBoothController;
+
+Route::get('/booth', [PhotoBoothController::class, 'index']);
+Route::post('/capture', [PhotoBoothController::class, 'capture'])->name('capture');
 
 
 Route::post('/convert-docx-to-pdf', [DocumentController::class, 'convertToPdf']);
@@ -14,6 +18,10 @@ Route::get('/generate2', [DocumentController::class, 'generate1']);
 
 Route::get('/love-letter', function () {
     return view('ari');
+});
+
+Route::get('/next-letter', function () {
+    return view('next-flower');
 });
 
 Route::get('/testAR', function () {
