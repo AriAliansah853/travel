@@ -1,34 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
+@section('content')
+<div class="hero">
+    <h1 id="typing-text"></h1>
+    {{-- <p>Terima kasih telah menjadi bagian dari hidupku. Aku mencintaimu selamanya.</p> --}}
+</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Anniversary!</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
+{{-- <!-- Parallax Section -->
+<div class="parallax" style="background-image: url('https://via.placeholder.com/1500x800');">
+    <h2 data-aos="fade-up">Kenangan Manis Kita</h2>
+</div> --}}
 
-<body class="flex items-center justify-center min-h-screen text-gray-800 bg-pink-100">
+<!-- Countdown -->
+<div class="container mt-5">
+    <h2 data-aos="fade-up">Hitung Mundur Anniversary</h2>
+    <p id="countdown"></p>
+    <p>Coming Soon !</p>
+</div>
 
-    <div class="max-w-3xl p-6 mx-auto text-center bg-white rounded-lg shadow-xl">
-        <h1 class="text-4xl font-bold text-pink-600">💖 Happy Anniversary Sayang! 💖</h1>
-        <p class="mt-4 text-lg">Hari ini adalah hari spesial kita! Terima kasih sudah menjadi bagian dari hidupku. Aku
-            sangat mencintaimu! ❤️</p>
 
-        <div class="mt-6">
-            <img src="https://source.unsplash.com/600x400/?love,romantic" class="w-full rounded-lg shadow-md"
-                alt="Love Image">
-        </div>
+<script>
+    // Efek Confetti saat halaman dibuka
+    setTimeout(() => confetti(), 500);
 
-        <div class="flex flex-col justify-center gap-4 mt-6 md:flex-row">
-            <a href="{{ url('/gallery') }}"
-                class="px-6 py-3 text-white bg-pink-500 rounded-lg shadow-md hover:bg-pink-600">📸 Lihat Kenangan</a>
-            <a href="{{ url('/love-letter') }}"
-                class="px-6 py-3 text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600">💌 Buka Surat Cinta</a>
-        </div>
-    </div>
+    // Efek Mengetik untuk Hero Section
+    const heroText = "Happy Anniversary, Sayang! ❤️";
+    let heroIndex = 0;
+    function typeHeroText() {
+        if (heroIndex < heroText.length) {
+            document.getElementById("typing-text").innerHTML += heroText.charAt(heroIndex);
+            heroIndex++;
+            setTimeout(typeHeroText, 100);
+        }
+    }
+    setTimeout(typeHeroText, 500);
 
-</body>
-
-</html>
-{{-- testari --}}
+    // Countdown ke Anniversary Berikutnya
+    function countdown() {
+        const nextAnniv = new Date("April 16, 2025 00:00:00").getTime();
+        const now = new Date().getTime();
+        const difference = nextAnniv - now;
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        document.getElementById("countdown").innerText = `${days} hari lagi menuju anniversary kita!`;
+    }
+    countdown();
+</script>
