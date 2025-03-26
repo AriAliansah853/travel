@@ -13,7 +13,18 @@
         .hero { padding: 100px 20px; opacity: 0; transform: scale(0.8); animation: zoomIn 1.5s ease-in-out forwards; }
         @keyframes zoomIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
         .parallax { background-attachment: fixed; background-size: cover; padding: 100px 20px; }
-        .popup { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.9); color: black; padding: 20px; border-radius: 10px; display: none; z-index: 999; }
+        .popup { 
+            position: fixed;
+            top: 50%; 
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            display: none; z-index: 999;
+            margin-top:200px
+         }
     </style>
 </head>
 <body>
